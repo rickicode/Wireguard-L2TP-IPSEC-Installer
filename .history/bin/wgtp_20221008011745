@@ -116,7 +116,7 @@ echo
 		;;
 		3)
 			echo
-			/usr/local/etc/wgtp/wgcf/add
+			/usr/local/etc/wgtp/ipsec/adduser.sh
 			exit
 		;;
 		4)

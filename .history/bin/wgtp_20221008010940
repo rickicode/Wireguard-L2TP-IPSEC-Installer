@@ -99,7 +99,7 @@ echo
   echo "   7) Uninstall L2TP" 
   echo "   8) Exit"
 	read -p "   Pilih Satu Opsi: " option
-	until [[ "$option" =~ ^[1-8]$ ]]; do
+	until [[ "$option" =~ ^[1-6]$ ]]; do
 		echo "$option: invalid selection."
 		read -p "   Pilih Satu Opsi: " option
 	done
@@ -116,7 +116,7 @@ echo
 		;;
 		3)
 			echo
-			/usr/local/etc/wgtp/wgcf/add
+			/usr/local/etc/wgtp/ipsec/adduser.sh
 			exit
 		;;
 		4)

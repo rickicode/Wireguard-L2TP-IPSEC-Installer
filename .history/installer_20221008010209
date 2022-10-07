@@ -554,11 +554,6 @@ echo "Wireguard Sudah di Install"
 fi
 
 
-wget https://github.com/ViRb3/wgcf/releases/download/v2.2.15/wgcf_2.2.15_linux_amd64
-mv wgcf_2.2.15_linux_amd64 wgcf
-chmod +x wgcf
-
-
 cd /usr/local/etc/wgtp
 rm -rf /usr/bin/wgtp
 mv -f /usr/local/etc/wgtp/bin/wgtp /usr/bin/wgtp

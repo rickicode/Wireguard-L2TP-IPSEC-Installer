@@ -113,6 +113,8 @@ EOF
 }
 
 
+
+
 echo
 echo "Provide a name for the client:"
 read -p "Name: " unsanitized_client
