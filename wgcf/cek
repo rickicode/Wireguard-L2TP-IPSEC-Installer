@@ -9,8 +9,8 @@ if [ ! -f "$FILE" ]; then
     exit
 fi
 
-mv /root/akun/wgcf/wgcf-$NAMA.conf /root/wgcf-profile.conf
-mv /root/akun/wgcf/wgcf-$NAMA.toml /root/wgcf-account.toml
+cp /root/akun/wgcf/wgcf-$NAMA.conf /root/wgcf-profile.conf
+cp /root/akun/wgcf/wgcf-$NAMA.toml /root/wgcf-account.toml
 
 wgcf update
 

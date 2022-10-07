@@ -56,8 +56,7 @@ echo
             rm -rf /root/wgcf-profile.conf
             rm -rf /root/wgcf-account.toml
 			wgcf register --accept-tos &> /dev/null
-            WGCF_LICENSE_KEY="$LICENSEKEY"
-            wgcf update &> /dev/null
+            WGCF_LICENSE_KEY="$LICENSEKEY" wgcf update
             wgcf generate
             echo "Akun sudah dibuat..."
             echo
