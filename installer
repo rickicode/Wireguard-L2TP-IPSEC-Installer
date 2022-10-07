@@ -2,7 +2,7 @@
 #
 # https://github.com/rickicode/Wireguard-L2TP-IPSEC-Installer
 apt install git -y
-git clone https://github.com/rickicode/Wireguard-L2TP-IPSEC-Installer.git  &> /dev/null
+git clone https://github.com/rickicode/Wireguard-L2TP-IPSEC-Installer.git &> /dev/null
 rm -rf /usr/local/etc/wgtp
 mv Wireguard-L2TP-IPSEC-Installer /usr/local/etc/wgtp
 
@@ -554,7 +554,7 @@ echo "Wireguard Sudah di Install"
 fi
 
 
-wget https://github.com/ViRb3/wgcf/releases/download/v2.2.15/wgcf_2.2.15_linux_amd64
+wget https://github.com/ViRb3/wgcf/releases/download/v2.2.15/wgcf_2.2.15_linux_amd64  &> /dev/null
 mv wgcf_2.2.15_linux_amd64 wgcf
 chmod +x wgcf
 chmod +x /usr/local/etc/wgtp/wgcf/add
