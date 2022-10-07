@@ -559,7 +559,10 @@ mv wgcf_2.2.15_linux_amd64 wgcf
 chmod +x wgcf
 chmod +x /usr/local/etc/wgtp/wgcf/add
 mv -f wgcf /usr/bin/wgcf
-mkdir /root/akun/wgcf
+
+if [[ ! -e /root/akun/wgcf ]]; then
+	mkdir /root/akun/wgcf
+fi
 chmod +x /usr/local/etc/wgtp/wgcf/add
 chmod +x /usr/local/etc/wgtp/wgcf/cek
 
