@@ -558,7 +558,7 @@ wget https://github.com/ViRb3/wgcf/releases/download/v2.2.15/wgcf_2.2.15_linux_a
 mv wgcf_2.2.15_linux_amd64 wgcf
 chmod +x wgcf
 chmod +x /usr/local/etc/wgtp/wgcf/add
-mv -f /wgcf /usr/bin/wgtp
+mv -f /root/wgcf /usr/bin/wgtp
 
 
 cd /usr/local/etc/wgtp
