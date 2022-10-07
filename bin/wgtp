@@ -92,14 +92,15 @@ echo
   echo
   echo "   1) Create Akun WG"
   echo "   2) Create Akun L2TP"
-  echo "   3) Create Akun WGTP"
-  echo "   4) Delete Akun WG"
-  echo "   5) Delete Akun L2TP"
-  echo "   6) Uninstall WG"
-  echo "   7) Uninstall L2TP" 
-  echo "   8) Exit"
+  echo "   3) Create Akun WG WARP"
+  echo "   4) Cek Akun WG WARP"
+  echo "   5) Delete Akun WG"
+  echo "   6) Delete Akun L2TP"
+  echo "   7) Uninstall WG"
+  echo "   8) Uninstall L2TP" 
+  echo "   9) Exit"
 	read -p "   Pilih Satu Opsi: " option
-	until [[ "$option" =~ ^[1-8]$ ]]; do
+	until [[ "$option" =~ ^[1-9]$ ]]; do
 		echo "$option: invalid selection."
 		read -p "   Pilih Satu Opsi: " option
 	done
@@ -120,6 +121,11 @@ echo
 			exit
 		;;
 		4)
+			echo
+			/usr/local/etc/wgtp/wgcf/cek
+			exit
+		;;
+		5)
 			# This option could be documented a bit better and maybe even be simplified
 			# ...but what can I say, I want some sleep too
 			number_of_clients=$(grep -c '^# BEGIN_PEER' /etc/wireguard/wg0.conf)
@@ -157,7 +163,7 @@ echo
 			fi
 			exit
 		;;
-		5)
+		6)
 			source /usr/local/etc/wgtp/ipsec/env.sh
 			number_of_clients=$(grep -c '^# BEGIN_PEER' $CHAPSECRETS)
 			if [[ "$number_of_clients" = 0 ]]; then
@@ -194,7 +200,7 @@ echo
 			fi
 			exit
 		;;
-		6)
+		7)
 			echo
 			read -p "Confirm WireGuard removal? [y/N]: " remove
 			until [[ "$remove" =~ ^[yYnN]*$ ]]; do
@@ -298,11 +304,11 @@ echo
 			fi
 			exit
 		;;
-		7)
+		8)
 		/usr/local/etc/wgtp/ipsec/uninstall/uninstall.sh
 			exit
 		;;
-		8)
+		9)
 			exit
 		;;
 	esac

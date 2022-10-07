@@ -1,0 +1,17 @@
+unset NAMA
+while [[ -z "$NAMA" ]];
+do
+    read -p "Masukkan NAMA AKUN : " NAMA
+done
+FILE=/root/akun/wgcf-$NAMA.toml
+if [ ! -f "$FILE" ]; then
+    echo "Nama tidak ada."
+    exit
+fi
+
+mv /root/akun/wgcf-$NAMA.conf /root/wgcf-profile.conf
+mv /root/akun/wgcf-$NAMA.toml /root/wgcf-account.toml
+
+wgcf update
+
+wgcf generate

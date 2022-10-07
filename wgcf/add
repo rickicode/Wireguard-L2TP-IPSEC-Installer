@@ -1,7 +1,7 @@
 
 echo
   echo "Selamat datang di WGCF HIJINETWORK"
-  echo "   -------------------------PILIHAN MENU------------------------"
+  echo "   -------------------------SILAHKAN PILIH------------------------"
   echo
   echo "   1) Create NEW WGCF ACCOUNT"
   echo "   2) Create WGCF WITH KEY"
@@ -13,36 +13,65 @@ echo
 	case "$option" in
 		1)
 			echo
+            unset NAMA
+            while [[ -z "$NAMA" ]];
+            do
+                read -p "Masukkan NAMA AKUN : " NAMA
+            done
             echo "Membuat WGCF BARU..."
             rm -rf /root/wgcf-profile.conf
             rm -rf /root/wgcf-account.toml
-			wgcf register --accept-tos
-            wgcf update
+			wgcf register --accept-tos &> /dev/null
+            wgcf update &> /dev/null
             wgcf generate
             echo "Akun sudah dibuat..."
+            echo
+            echo
+            echo "   -------------------------WARP CLOUDFIRE ACCOUNT------------------------"
+            echo
             cat /root/wgcf-profile.conf
-            echo "File ada di /root/wgcf-profile.conf"
+            echo
+            echo "   -------------------------WARP CLOUDFIRE ACCOUNT------------------------"
+            echo
+            echo
+            mv /root/wgcf-profile.conf /root/akun/wgcf-$NAMA.conf
+            mv /root/wgcf-account.toml /root/akun/wgcf-$NAMA.toml
+            echo "File ada di /root/akun/wgcf-$NAMA.conf"
 			exit
 		;;
 		2)
 			echo
+            unset NAMA
+            while [[ -z "$NAMA" ]];
+            do
+                read -p "Masukkan AKUN : " NAMA
+            done
             unset LICENSEKEY
             while [[ -z "$LICENSEKEY" ]];
             do
-                read -p "Masukan LISENSI WARP+ : " LICENSEKEY
+                read -p "Masukkan LISENSI WARP+ : " LICENSEKEY
                 echo
             done
             echo "Memproses WGCF dengan LISENSI..."
             rm -rf /root/wgcf-profile.conf
             rm -rf /root/wgcf-account.toml
-			wgcf register --accept-tos
+			wgcf register --accept-tos &> /dev/null
             WGCF_LICENSE_KEY="$LICENSEKEY"
-            wgcf update
+            wgcf update &> /dev/null
             wgcf generate
             echo "Akun sudah dibuat..."
+            echo
+            echo
+            echo "   -------------------------WARP CLOUDFIRE ACCOUNT------------------------"
+            echo
             cat /root/wgcf-profile.conf
-            echo "File ada di /root/wgcf-profile.conf"
-			exit
+            echo
+            echo "   -------------------------WARP CLOUDFIRE ACCOUNT------------------------"
+            echo
+            echo
+            mv /root/wgcf-profile.conf /root/akun/wgcf-$NAMA.conf
+            mv /root/wgcf-account.toml /root/akun/wgcf-$NAMA.toml
+            echo "File ada di /root/akun/wgcf-$NAMA.conf"
 		;;
         esac
 
