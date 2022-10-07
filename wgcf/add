@@ -34,9 +34,9 @@ echo
             echo "   -------------------------WARP CLOUDFIRE ACCOUNT------------------------"
             echo
             echo
-            mv /root/wgcf-profile.conf /root/akun/wgcf-$NAMA.conf
-            mv /root/wgcf-account.toml /root/akun/wgcf-$NAMA.toml
-            echo "File ada di /root/akun/wgcf-$NAMA.conf"
+            mv /root/wgcf-profile.conf /root/akun/wgcf/wgcf-$NAMA.conf
+            mv /root/wgcf-account.toml /root/akun/wgcf/wgcf-$NAMA.toml
+            echo "File ada di /root/akun/wgcf/wgcf-$NAMA.conf"
 			exit
 		;;
 		2)
@@ -69,9 +69,9 @@ echo
             echo "   -------------------------WARP CLOUDFIRE ACCOUNT------------------------"
             echo
             echo
-            mv /root/wgcf-profile.conf /root/akun/wgcf-$NAMA.conf
-            mv /root/wgcf-account.toml /root/akun/wgcf-$NAMA.toml
-            echo "File ada di /root/akun/wgcf-$NAMA.conf"
+            mv /root/wgcf-profile.conf /root/akun/wgcf/wgcf-$NAMA.conf
+            mv /root/wgcf-account.toml /root/akun/wgcf/wgcf-$NAMA.toml
+            echo "File ada di /root/akun/wgcf/wgcf-$NAMA.conf"
 		;;
         esac
 
