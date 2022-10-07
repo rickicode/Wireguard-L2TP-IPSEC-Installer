@@ -13,5 +13,5 @@ cp /root/akun/wgcf/wgcf-$NAMA.conf /root/wgcf-profile.conf
 cp /root/akun/wgcf/wgcf-$NAMA.toml /root/wgcf-account.toml
 
 wgcf update
-
+wgcf status
 wgcf generate
