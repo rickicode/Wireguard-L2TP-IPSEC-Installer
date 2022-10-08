@@ -565,6 +565,7 @@ if [[ ! -e /root/akun/wgcf ]]; then
 fi
 chmod +x /usr/local/etc/wgtp/wgcf/add
 chmod +x /usr/local/etc/wgtp/wgcf/cek
+echo "WGCF GENERATOR Sudah di Install"
 
 cd /usr/local/etc/wgtp
 rm -rf /usr/bin/wgtp
