@@ -27,11 +27,11 @@ echo
             echo "Akun sudah dibuat..."
             echo
             echo
-            echo "   -------------------------WARP CLOUDFIRE ACCOUNT------------------------"
+            echo "###-------------------------WARP CLOUDFIRE ACCOUNT------------------------###"
             echo
             cat /root/wgcf-profile.conf
             echo
-            echo "   -------------------------WARP CLOUDFIRE ACCOUNT------------------------"
+            echo "###-------------------------WARP CLOUDFIRE ACCOUNT------------------------###"
             echo
             echo
             mv /root/wgcf-profile.conf /root/akun/wgcf/wgcf-$NAMA.conf
@@ -61,11 +61,11 @@ echo
             echo "Akun sudah dibuat..."
             echo
             echo
-            echo "   -------------------------WARP CLOUDFIRE ACCOUNT------------------------"
+            echo "###-------------------------WARP CLOUDFIRE ACCOUNT------------------------###"
             echo
             cat /root/wgcf-profile.conf
             echo
-            echo "   -------------------------WARP CLOUDFIRE ACCOUNT------------------------"
+            echo "###-------------------------WARP CLOUDFIRE ACCOUNT------------------------###"
             echo
             echo
             mv /root/wgcf-profile.conf /root/akun/wgcf/wgcf-$NAMA.conf
