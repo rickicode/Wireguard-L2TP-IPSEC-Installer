@@ -121,10 +121,12 @@ if [[ "$IP" = "" ]]; then
 fi
 #PSK=$(grep '^%any %any :' /etc/ipsec.secrets | cut -d '"' -f 2)
 
+DOMAIN=$(cat /usr/local/etc/wgtp/domain.txt)
+echo $DOMAIN
 	cat << EOF > /root/akun/l2tp/"$LOGIN".txt
 Terimakasih Telah Menggunakan Layanan HIJITOKO
 ====== Informasi Akun ======
-Address		: $IP
+Address		: $IP / $DOMAIN
 Ipsec		: $PSK
 Username    : $LOGIN
 Password	: $PASSWORD
@@ -141,7 +143,7 @@ EOF
 clear
 echo "Terimakasih Telah Menggunakan Layanan HIJITOKO"
 echo "====== Informasi Akun ======"
-echo "Address		: $IP"
+echo "Address		: $IP / $DOMAIN"
 echo "Ipsec		: $PSK"
 echo "Username	: $LOGIN"
 echo "Password	: $PASSWORD"
