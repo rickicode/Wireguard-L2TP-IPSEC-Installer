@@ -100,7 +100,7 @@ echo
   echo "   8) Uninstall L2TP" 
   echo "   9) Exit"
 	read -p "   Pilih Satu Opsi: " option
-	until [[ "$option" =~ ^[1-9]$ ]]; do
+	until [[ "$option" =~ ^[1-6]$ ]]; do
 		echo "$option: invalid selection."
 		read -p "   Pilih Satu Opsi: " option
 	done
