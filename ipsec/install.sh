@@ -4,9 +4,20 @@ DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 source $DIR/env.sh
 
 if [[ "$EUID" -ne 0 ]]; then
-	echo "Sorry, you need to run this as root"
-	exit 1
+    echo "Sorry, you need to run this as root"
+    exit 1
 fi
+
+
+unset DOMAIN
+
+while [[ -z "$DOMAIN" ]];
+do
+    read -p "Enter domain name : " DOMAIN
+    echo
+done
+rm -rf /usr/local/etc/wgtp/domain.txt
+echo -e $DOMAIN >> /usr/local/etc/wgtp/domain.txt
 
 echo
 echo "Creating backup..."
@@ -16,7 +27,7 @@ echo
 echo "Installing strongSwan and xl2tp server..."
 eval $PCKTMANAGER update
 if [ "$PLATFORM" == "$CENTOSPLATFORM" ]; then
-	eval $INSTALLER epel-release
+    eval $INSTALLER epel-release
 fi
 eval $INSTALLER strongswan xl2tpd ppp $CRON_PACKAGE $IPTABLES_PACKAGE procps net-tools
 

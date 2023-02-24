@@ -22,14 +22,3 @@ sed -i -e "/[[:space:]]\+PSK[[:space:]]\+/s/^/# /" $SECRETSFILE
 echo -e "\n%any %any : PSK \"$PSK\"" >> $SECRETSFILE
 
 echo "$SECRETSFILE updated!"
-
-
-unset DOMAIN
-
-while [[ -z "$DOMAIN" ]];
-do
-    read -p "Enter domain name : " DOMAIN
-    echo
-done
-rm -rf /usr/local/etc/wgtp/domain.txt
-echo -e $DOMAIN >> /usr/local/etc/wgtp/domain.txt
