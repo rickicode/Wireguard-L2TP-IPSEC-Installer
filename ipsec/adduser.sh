@@ -87,7 +87,7 @@ mkdir -p "$DIR/akun/$LOGIN"
 DISTFILE=$DIR/akun/$LOGIN/setup.sh
 cp -rf $DIR/setup.sh.dist "$DISTFILE"
 sed -i -e "s@_PSK_@$PSK@g" "$DISTFILE"
-sed -i -e "s@_SERVERLOCALIP_@$LOCALPREFIX.0.1@g" "$DISTFILE"
+sed -i -e "s@_SERVERLOCALIP_@$LOCALPREFIX.1@g" "$DISTFILE"
 
 DISTFILE=$DIR/akun/$LOGIN/ipsec.conf
 cp -rf $DIR/ipsec.conf.dist "$DISTFILE"
